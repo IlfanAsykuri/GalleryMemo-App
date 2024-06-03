@@ -1,0 +1,297 @@
+/* Custom CSS */
+
+
+/* Navbar */
+
+.navbar {
+    background: linear-gradient(to right, #496989, #58A399);
+    color: #fff;
+}
+
+.navbar-brand img {
+    margin-right: 5px;
+    /* Mengatur jarak antara gambar dan teks */
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1);
+    /* Memberi efek zoom in saat dihover */
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    background-color: #496989;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    padding-top: 60px;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar-header p {
+    margin-bottom: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+    border-bottom: none;
+    /* Hapus garis */
+    transition: all 0.3s ease;
+    /* Tambahkan transisi */
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    /* Hapus dekorasi link */
+    display: block;
+}
+
+
+/* Tambahkan efek hover */
+
+.sidebar ul li:hover {
+    background-color: #557696;
+    opacity: 0.5;
+    /* Ubah warna latar belakang saat di-hover */
+}
+
+.sidebar ul li:hover a {
+    color: #fff;
+    /* Ubah warna teks saat di-hover */
+}
+
+
+/* Tambahkan gaya untuk menu yang aktif */
+
+.sidebar ul li.active {
+    background-color: #405c6b;
+    /* Ubah warna latar belakang saat aktif */
+}
+
+.sidebar ul li.active a {
+    color: #fff;
+    /* Ubah warna teks saat aktif */
+}
+
+
+/* Content */
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    margin-top: 70px;
+    /* Penambahan margin-top */
+}
+
+
+/* Gaya foto */
+
+.gallery-item {
+    margin-bottom: 20px;
+    /* Menambahkan jarak bawah antara foto */
+    position: relative;
+    /* Mengatur posisi relatif untuk galeri item */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    /* Memberikan sedikit efek border-radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    /* Tambahkan transisi untuk efek hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Tambahkan bayangan dasar */
+}
+
+.gallery-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Mengatur lebar caption agar sesuai dengan foto */
+    background: linear-gradient(to right, #496989, #58A399);
+    /* Mengurangi kegelapan latar belakang */
+    color: #fff;
+    padding: 8px;
+    opacity: 0;
+    /* Nilai opacity awal */
+    transition: opacity 0.3s ease;
+    border-radius: 0 0 8px 8px;
+    /* Memberikan efek border-radius pada sudut bawah */
+    overflow: hidden;
+    /* Menghindari tulisan melebihi foto */
+    margin: 0;
+    /* Mengatur margin menjadi 0 */
+    height: auto;
+    /* Menyesuaikan tinggi caption */
+    max-height: 50%;
+    /* Menentukan tinggi maksimum caption agar tidak terlalu besar */
+    box-sizing: border-box;
+    /* Memastikan padding tidak memperbesar lebar atau tinggi caption */
+}
+
+
+/* Tampilkan tulisan saat dihover */
+
+.gallery-item:hover img {
+    opacity: 0.7;
+    /* Ubah nilai opacity saat dihover */
+    transform: scale(1.05);
+    /* Efek zoom in */
+}
+
+.gallery-item:hover .caption {
+    opacity: 0.9;
+    /* Ubah nilai opacity saat dihover */
+    max-height: 100%;
+    /* Tampilkan caption hingga mencapai bagian bawah foto */
+}
+
+
+/* Tampilan Album */
+
+.folder-link {
+    background-color: #333333;
+    width: fit-content;
+    text-align: center;
+    padding: 0;
+}
+
+.folder-icon {
+    font-size: 5em;
+    color: #888888;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.folder-icon:hover {
+    transform: scale(1.1);
+}
+
+.folder-title {
+    text-align: center;
+    color: #333333;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.folder-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-add-album {
+    margin-top: 30px;
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: #496989;
+        color: #fff;
+        transition: width 0.3s ease;
+    }
+    .sidebar.sidebar-active {
+        width: 250px;
+    }
+    .content {
+        margin-left: 250px;
+        transition: margin-left 0.3s ease;
+    }
+}
+
+
+/* Form Upload */
+
+.form-group {
+    background-color: #f8f9fa;
+    /* Warna latar belakang form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Efek bayangan */
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control-file {
+    border: 1px solid #ced4da;
+    /* Warna border */
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    /* Tambahkan padding */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-primary i {
+    margin-right: 5px;
+}
+
+
+/* Tambahkan gaya untuk container yang menampilkan file yang dipilih */
+
+#selectedFilesContainer {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+
+/* Gaya tombol remove */
+
+.selected-file-item {
+    margin-bottom: 5px;
+}
+
+.selected-file-item .remove-file {
+    margin-left: 5px;
+}
